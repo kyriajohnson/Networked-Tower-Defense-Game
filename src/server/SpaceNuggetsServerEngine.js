@@ -2,7 +2,7 @@
 
 const ServerEngine = require('lance-gg').ServerEngine;
 
-class MyServerEngine extends ServerEngine {
+class SpaceNuggetsServerEngine extends ServerEngine {
 
     constructor(io, gameEngine, inputOptions) {
         super(io, gameEngine, inputOptions);
@@ -24,4 +24,4 @@ class MyServerEngine extends ServerEngine {
     }
 }
 
-module.exports = MyServerEngine;
+module.exports = SpaceNuggetsServerEngine;

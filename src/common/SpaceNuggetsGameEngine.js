@@ -2,7 +2,7 @@
 
 const GameEngine = require('lance-gg').GameEngine;
 
-class MyGameEngine extends GameEngine {
+class SpaceNuggetsGameEngine extends GameEngine {
 
     constructor(options) {
         super(options);
@@ -42,4 +42,4 @@ class MyGameEngine extends GameEngine {
     }
 }
 
-module.exports = MyGameEngine;
+module.exports = SpaceNuggetsGameEngine;

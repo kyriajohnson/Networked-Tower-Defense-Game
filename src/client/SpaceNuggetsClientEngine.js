@@ -1,7 +1,7 @@
 const ClientEngine = require('lance-gg').ClientEngine;
 const MyRenderer = require('../client/MyRenderer');
 
-class MyClientEngine extends ClientEngine {
+class SpaceNuggetsClientEngine extends ClientEngine {
 
     constructor(gameEngine, options) {
         super(gameEngine, options, MyRenderer);
@@ -64,4 +64,4 @@ class MyClientEngine extends ClientEngine {
     }
 }
 
-module.exports = MyClientEngine;
+module.exports = SpaceNuggetsClientEngine;

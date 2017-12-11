@@ -15,14 +15,14 @@ let requestHandler = server.listen(PORT, () => console.log(`Listening on ${ PORT
 const io = socketIO(requestHandler);
 
 // Game Server
-const MyServerEngine = require(path.join(__dirname, 'src/server/MyServerEngine.js'));
-const MyGameEngine = require(path.join(__dirname, 'src/common/MyGameEngine.js'));
+const SpaceNuggetsServerEngine = require(path.join(__dirname, 'src/server/SpaceNuggetsServerEngine.js'));
+const SpaceNuggetsGameEngine = require(path.join(__dirname, 'src/common/SpaceNuggetsGameEngine.js'));
 const SimplePhysicsEngine = require('lance-gg').physics.SimplePhysicsEngine;
 
 // Game Instances
 const physicsEngine = new SimplePhysicsEngine();
-const gameEngine = new MyGameEngine({ physicsEngine, traceLevel: 1 });
-const serverEngine = new MyServerEngine(io, gameEngine, { debug: {}, updateRate: 6 });
+const gameEngine = new SpaceNuggetsGameEngine({ physicsEngine, traceLevel: 1 });
+const serverEngine = new SpaceNuggetsServerEngine(io, gameEngine, { debug: {}, updateRate: 6 });
 
 // start the game
 serverEngine.start();

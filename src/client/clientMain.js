@@ -1,6 +1,6 @@
 const qsOptions = require('query-string').parse(location.search);
-const MyClientEngine = require('../client/MyClientEngine');
-const MyGameEngine = require('../common/MyGameEngine');
+const SpaceNuggetsClientEngine = require('../client/SpaceNuggetsClientEngine');
+const SpaceNuggetsGameEngine = require('../common/SpaceNuggetsGameEngine');
 const SimplePhysicsEngine = require('lance-gg').physics.SimplePhysicsEngine;
 
 
@@ -24,7 +24,7 @@ if (options.syncOptions.sync === 'extrapolate')
     options.physicsEngine = new SimplePhysicsEngine();
 
 // create a client engine and a game engine
-const gameEngine = new MyGameEngine(options);
-const clientEngine = new MyClientEngine(gameEngine, options);
+const gameEngine = new SpaceNuggetsGameEngine(options);
+const clientEngine = new SpaceNuggetsClientEngine(gameEngine, options);
 
 document.addEventListener('DOMContentLoaded', function(e) { clientEngine.start(); });
