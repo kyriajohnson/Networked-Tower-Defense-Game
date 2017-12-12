@@ -5,11 +5,10 @@ const DynamicObject= require('lance-gg').serialize.DynamicObject;
 
 class WaterUnit extends DynamicObject {
 
-    constructor(id, x, y, velocity) {
+    constructor(id, x, y) {
         super(id);
         this.position.set(x,y);
         this.class = WaterUnit;
-        this.velocity = (velocity, 0);    //move either left or right
     }
 
     onAddToWorld(gameEngine) {
