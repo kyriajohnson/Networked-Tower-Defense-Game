@@ -8,7 +8,7 @@ class Base extends DynamicObject {
     constructor(id, x, playerId) {
         super(id);
         this.playerId = playerId;
-        this.position.set(x,0);
+        this.position.set(x,-400);
         this.class = Base;
     }
 

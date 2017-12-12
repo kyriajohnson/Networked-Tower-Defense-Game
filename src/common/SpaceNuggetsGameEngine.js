@@ -5,7 +5,7 @@ const Base = require('./Base');
 const FireUnit = require('./FireUnit');
 const WaterUnit = require('./WaterUnit');
 const EarthUnit = require('./EarthUnit');
-const PADDING =  20;
+const PADDING =  60;
 const WIDTH = 1200;
 const HEIGHT = 400;
 const BASE_WIDTH = 50;
@@ -97,7 +97,7 @@ class SpaceNuggetsGameEngine extends GameEngine {
     */
     createWaterUnit(playerId) {
         let yPos;
-        let randPos = getRandomInt(1,4);
+        let randPos = this.getRandomInt(1,4);
         if(randPos = 1) {
             yPos = 50;
         } else if(randPos = 2) {
@@ -124,7 +124,7 @@ class SpaceNuggetsGameEngine extends GameEngine {
     */
     createEarthUnit(playerId) {
         let yPos;
-        let randPos = getRandomInt(1,4);
+        let randPos = this.getRandomInt(1,4);
         if(randPos = 1) {
             yPos = 50;
         } else if(randPos = 2) {
@@ -151,7 +151,7 @@ class SpaceNuggetsGameEngine extends GameEngine {
     */
     createFireUnit(playerId) {
         let yPos;
-        let randPos = getRandomInt(1,4);
+        let randPos = this.getRandomInt(1,4);
         if(randPos = 1) {
             yPos = 50;
         } else if(randPos = 2) {
