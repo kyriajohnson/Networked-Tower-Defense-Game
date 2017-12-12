@@ -1,6 +1,16 @@
 'use strict';
 
 const GameEngine = require('lance-gg').GameEngine;
+const Base = require('./Base');
+const FireUnit = require('./FireUnit');
+const WaterUnit = require('./WaterUnit');
+const EarthUnit = require('./EarthUnit');
+const PADDING =  20;
+const WIDTH = 1200;
+const HEIGHT = 400;
+const BASE_WIDTH = 10;
+const BASE_HEIGHT = 50;
+
 
 class SpaceNuggetsGameEngine extends GameEngine {
 
@@ -12,10 +22,7 @@ class SpaceNuggetsGameEngine extends GameEngine {
 
         super.start();
 
-        this.worldSettings = {
-            width: 400,
-            height: 400
-        };
+
     }
 
     processInput(inputData, playerId) {
